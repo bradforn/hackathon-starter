@@ -2,7 +2,7 @@
   .container
     a.navbar-brand(href='/')
       i.fas.fa-cube
-      | Project name
+      | Sweet Pea Cleaning
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='.navbar-collapse')
       span.sr-only Toggle navigation
       span.navbar-toggler-icon
@@ -16,6 +16,14 @@
           a.nav-link(href='/contact') Contact
         li.nav-item(class=(title === 'Status') ? 'active' : undefined)
           a.nav-link(href='/status') Status
+        li.nav-item(class=(title === 'About Us') ? 'active' : undefined)
+          a.nav-link(href='/status') About Us
+        li.nav-item(class=(title === 'Testimonial') ? 'active' : undefined)
+          a.nav-link(href='/status') Testimonial
+        if !user
+        else
+          li.nav-item(class=(title === 'Schedule') ? 'active' : undefined)
+            a.nav-link(href='/status') Schedule
       ul.nav.navbar-nav.ml-auto
         if !user
           li.nav-item(class=(title === 'Login') ? 'active' : undefined)
